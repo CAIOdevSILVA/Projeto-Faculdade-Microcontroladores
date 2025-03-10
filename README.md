@@ -55,7 +55,7 @@ void loop()
 
 ## 🖥 Como Acessar a Simulação
 A simulação do projeto foi realizada na plataforma [Tinkercad](https://www.tinkercad.com/). Para visualizar e testar o circuito:
-1. Acesse o link: [[**(inserir link da simulação aqui)**](https://www.tinkercad.com/things/iaoKOQdVYf7-smooth-bigery-hillar/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=Wvd1E2OtxCPRkmWTzBDJQKm0Azdlp_mNo7cadOaQ6w4)]
+1. Acesse o link: [[**Link da simulação**](https://www.tinkercad.com/things/iaoKOQdVYf7-smooth-bigery-hillar/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=Wvd1E2OtxCPRkmWTzBDJQKm0Azdlp_mNo7cadOaQ6w4)]
 2. Clique em "Start Simulation" para ver o funcionamento do sistema.
 
 📍 obs: Com esse link, você também poderá editar o projeto. Portanto, siga as instruções acima corretamente para evitar alterações indesejadas.
