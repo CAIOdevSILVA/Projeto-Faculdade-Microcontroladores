@@ -21,36 +21,46 @@ Ensinar os conceitos básicos de microcontroladores e demonstrar, por meio de um
 
 ## 💻 Código Fonte (Arduino)
 ```c
-const int botao = 2;
-const int buzzer = 3;
-const int led = 4;
+int buzzer = 13; //variavel conectada a porta 13
+int button = 2; //variavel conectada a porta 2
+int led = 8; //variavel conectada a porta 8
 
-void setup() {
-    pinMode(botao, INPUT_PULLUP);
-    pinMode(buzzer, OUTPUT);
-    pinMode(led, OUTPUT);
+void setup()
+{
+  pinMode(buzzer, OUTPUT); //buzzer como saida
+  pinMode(button, INPUT); //botão como entrada
+  pinMode(led, OUTPUT); // led como saida
 }
 
-void loop() {
-    if (digitalRead(botao) == LOW) {
-        digitalWrite(led, HIGH);
-        tone(buzzer, 1000); // Som da campainha
-        delay(1000);
-        noTone(buzzer);
-        digitalWrite(led, LOW);
-        delay(2000); // Pequena pausa antes de permitir novo acionamento
-    }
+void loop()
+{
+  int Swith_State = digitalRead(button); //pegando a estado do botão
+  if (Swith_State==HIGH){ // Se o botão for pressionado o led ascende e o 
+    					//buzzer emite o som da campainha
+  	digitalWrite(buzzer, HIGH);
+    digitalWrite(led, HIGH);
+    
+    tone(buzzer, 1100, 300); //Ding
+    delay(300);
+    
+    tone(buzzer, 850, 500);// Dong
+    delay(500);
+  }
+  else { // Caso contrário nada acontece
+  	digitalWrite(buzzer, LOW);
+    digitalWrite(led, LOW);
+  }
 }
 ```
 
 ## 🖥 Como Acessar a Simulação
-A simulação do projeto foi realizada na plataforma [Tinkercad](https://www.tinkercad.com/). Para visualizar e testar o circuito:
+A simulação do projeto foi realizada na plataforma [Tinkercad]([https://www.tinkercad.com/](https://www.tinkercad.com/things/iaoKOQdVYf7-smooth-bigery-hillar/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=Wvd1E2OtxCPRkmWTzBDJQKm0Azdlp_mNo7cadOaQ6w4)). Para visualizar e testar o circuito:
 1. Acesse o link: [**(inserir link da simulação aqui)**]
 2. Clique em "Start Simulation" para ver o funcionamento do sistema.
+
+📍 obs: Com esse link, você também poderá editar o projeto. Portanto, siga as instruções acima corretamente para evitar alterações indesejadas.
 
 ## 📢 Conclusão
 Essa atividade de extensão proporcionou uma experiência prática sobre o uso de microcontroladores para resolver problemas cotidianos. A proprietária do salão pôde aprender conceitos básicos e visualizar, por meio da simulação, como um sistema simples pode melhorar o atendimento do seu estabelecimento.
 
----
-🛠 **Desenvolvido como parte do projeto de extensão da disciplina de Programação de Microcontroladores.**
 
